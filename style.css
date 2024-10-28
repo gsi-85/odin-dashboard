@@ -1,0 +1,182 @@
+* {
+    font-family: "Roboto", sans-serif;;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a:link {
+    text-decoration: none; 
+  }
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar cont"
+}
+.icons svg {
+    width: 100px;
+}
+
+.profile svg{
+    width: 100px;
+}
+.header {
+    display: grid;
+    background-color: white;
+    grid-area: header;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: grey;
+    justify-items: center;
+    padding: 1rem 3rem;
+    grid-template-areas:
+    "search icons"
+    "profile links"
+}
+.icons {
+    grid-area: icons;
+}
+.sidebar {
+    background-color: #1892D4;
+    grid-area: sidebar;
+    padding: 1rem;
+    align-items: center;
+}
+.sidebar .logo {
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    color: white;
+    justify-self: center;
+    font-size: 36px;
+    margin-bottom: 3rem;
+}
+.sidebar .home {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+.sidebar svg{
+    fill: white;
+    width: 2rem;
+    justify-self: end;
+    padding-right: 10px;
+}
+.logo svg {
+    width: 3rem;
+    justify-self: center;
+}
+.sidebar .settings {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+.sidebar a {
+    padding: 1rem;
+    color: white;
+}
+.searchbar {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-self: center;
+    grid-area: search;
+}
+.searchbar input {
+    width: 40rem;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #E2E8F0;
+    border-style: none;
+}
+.searchbar svg {
+    width: 30px;
+    color:#1892D4;
+    padding-right: 4rem;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.icons svg {
+    width: 30px;
+}
+.links {
+    grid-area: links;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.links button {
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #1892D4;
+    color: white;
+    border-style: none;
+    font-size: 20px;
+}
+.logo svg {
+    justify-self: end;
+}
+.profile {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1rem 3rem;
+    align-items: center;
+    grid-area: profile;
+    justify-self: start;
+    grid-template-areas: 
+    "profile-pic greeting"
+    "profile-pic profile-handle"
+}
+.profile img {
+    grid-area: profile-pic;
+}
+.profile .greeting {
+    grid-area: greeting;
+}
+.profile h2 {
+    grid-area: profile-handle;
+    padding-bottom: 10px;
+}
+
+.cont {
+    background-color: #E2E8F0;
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "proj-list announcements"
+    "proj-list trending";
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: proj-list;
+}
+.announcement {
+    grid-area: announcements;
+}
+.trending {
+    grid-area: trending;
+}
