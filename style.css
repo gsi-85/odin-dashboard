@@ -13,8 +13,9 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: minmax(256px, 1fr) minmax(400px, 8fr);
+    grid-template-rows: 200px 1fr;
+    height: 100vh;
     grid-template-areas: 
     "sidebar header"
     "sidebar cont"
@@ -47,6 +48,7 @@
     grid-area: sidebar;
     padding: 1rem;
     align-items: center;
+    color: white;
 }
 .sidebar .logo {
     display: grid;
@@ -69,6 +71,9 @@
     width: 2rem;
     justify-self: end;
     padding-right: 10px;
+}
+.sidebar a:visited {
+    color: white;
 }
 .logo svg {
     width: 3rem;
@@ -159,7 +164,7 @@
     display: grid;
     gap: 2rem;
     padding: 2rem 1rem;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 350px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "proj-list announcement"
@@ -184,15 +189,18 @@
     flex-direction: column;
     background-color: white;
     justify-content: space-between;
-    border: 5px solid grey;
+    border: 1px solid grey;
     border-left: 10px solid orange;
     border-radius: 10px;
-    box-shadow: 0 0 8px grey;
-    padding: 1rem;
+    box-shadow: 0 0 5px grey;
+    padding: 2rem;
 }
 .trending {
     grid-area: trending;
     grid-template-rows: minmax(2rem, auto) 1fr;
+}
+.trending h4 {
+    padding-bottom: 1rem;
 }
 .announcement {
     grid-area: announcement;
@@ -202,12 +210,21 @@
 .announcement-list {
     background-color: white;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem;
+}
+.announcement-item .content{
+    border-bottom: 1px solid grey;
+}
+.announcement-item .content p {
+    padding: 0  0 2rem;
+}
+.announcement-item .content h2 {
+    padding: 1rem 0 0;
 }
 
 .trending-list {
     display: grid;
-    padding: 10px 0px;
+    padding: 1rem;
     gap: 6px;
     background-color: white;
     border-radius: 10px;
