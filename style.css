@@ -157,26 +157,95 @@
     background-color: #E2E8F0;
     grid-area: cont;
     display: grid;
+    gap: 2rem;
+    padding: 2rem 1rem;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "proj-list announcements"
+    "proj-list announcement"
     "proj-list trending";
 }
-
+.project-title {
+    margin-bottom: 1.2rem;
+}
 .projects {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(2rem, auto) 1fr;
+    grid-area: proj-list;
 }
 
 .projects-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-area: proj-list;
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+    gap: 1rem;
 }
-.announcement {
-    grid-area: announcements;
+.projects-item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    border: 5px solid grey;
+    border-left: 10px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 0 8px grey;
+    padding: 1rem;
 }
 .trending {
     grid-area: trending;
+    grid-template-rows: minmax(2rem, auto) 1fr;
 }
+.announcement {
+    grid-area: announcement;
+    display: grid;
+    grid-template-rows: minmax(2rem, auto) 1fr;
+}
+.announcement-list {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.trending-list {
+    display: grid;
+    padding: 10px 0px;
+    gap: 6px;
+    background-color: white;
+    border-radius: 10px;
+}
+.trending-list project {
+    display: grid;
+}
+.project {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "handle-icon handle"
+    "handle-icon project-desc"
+}
+.project img {
+    grid-area: handle-icon;
+}
+.project h4 {
+    grid-area: handle;
+}
+.project span {
+    grid-area: project-desc;
+}
+
+.project-nav {
+    align-self: flex-end;
+}
+.project-nav svg {
+    width: 1.5rem;
+    padding: 10px;
+}
+
+:link, :active, :visited , :focus{
+    text-decoration: none; 
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: black;
+   }
